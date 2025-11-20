@@ -1,0 +1,130 @@
+
+.relatoriosContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Card do Filtro */
+  .filtroCard {
+    background-color: #f8f9fa;
+  }
+  .filtroForm {
+    display: flex;
+    align-items: flex-end; 
+    flex-wrap: wrap; 
+    gap: 1.5rem;
+  }
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .inputGroup label {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .dateInput, .select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: white;
+  }
+  .select {
+    width: 200px; 
+  }
+  .filtroButton {
+    width: auto;
+  }
+  
+  /* Wrapper de Scroll */
+  .tableScrollWrapper {
+    max-height: 60vh; 
+    overflow-y: auto;
+  }
+  
+  /* Estilo  de tabela */
+  .reportTable { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .reportTable th,
+  .reportTable td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid #e0e0e0; vertical-align: middle; }
+  .reportTable th { background-color: #f8f9fa; font-weight: 600; }
+  .reportTable tbody tr:hover { background-color: #f8f9fa; }
+  
+  .error { color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c2c7; padding: 1rem; border-radius: 8px; }
+  
+  /* --- Estilos dos Dias Restantes --- */
+  .diasCell {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .diasCritico {
+    color: #dc3545; 
+  }
+  .diasAlerta {
+    color: #fd7e14;
+  }
+  .diasOk {
+    color: #198754; 
+  }
+  .diasNenhum {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #6c757d; 
+  }
+  
+  /* ---  Estilos da Ajuda --- */
+  .headerComAjuda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .helpButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0d6efd; 
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .helpButton:hover {
+    background-color: #f0f2f5; 
+  }
+  
+  /* ---  Estilos do Modal de Ajuda --- */
+  .modalContent {
+    margin-top: 1rem;
+  }
+  .modalContent h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.25rem;
+  }
+  .modalContent p, .modalContent li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  .modalContent ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  .modalContent li {
+    margin-bottom: 0.5rem;
+  }
+  .modalContent .formula {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #0d6efd;
+  }

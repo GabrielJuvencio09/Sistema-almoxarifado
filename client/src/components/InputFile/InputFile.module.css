@@ -1,0 +1,33 @@
+/* Em: src/components/InputFile.module.css */
+
+.uploadBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 2px dashed #ced4da;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    text-align: center;
+    color: #6c757d;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .uploadBox:hover {
+    background-color: #e9ecef;
+  }
+  
+  .uploadIcon {
+    color: #0d6efd;
+    margin-bottom: 1rem;
+  }
+  
+  .uploadBox p { margin: 0.25rem 0; font-weight: 500; }
+  .uploadButton { width: auto; margin: 1rem 0; }
+  .uploadBox small { font-size: 0.8rem; }
+  
+  .hiddenInput {
+    display: none;
+  }

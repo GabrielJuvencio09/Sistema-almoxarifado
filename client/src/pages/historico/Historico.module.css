@@ -1,0 +1,105 @@
+
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 800px; 
+}
+
+.historyTable th,
+.historyTable td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  white-space: normal; 
+  word-break: break-word;
+}
+
+.historyTable th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.historyTable tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.entrada, .saida {
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.entrada {
+  background-color: #d1e7dd; 
+  color: #0f5132; 
+}
+
+.saida {
+  background-color: #f8d7da; 
+  color: #842029; 
+}
+
+
+
+.filtroContainer {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: flex-end; 
+  gap: 1rem; 
+  margin-bottom: 1.5rem;
+}
+
+.filtroGrupo {
+  flex-grow: 1; 
+  min-width: 180px; 
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.select {
+  width: 100%; 
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: white;
+  height: calc(0.75rem * 2 + 1rem * 1.5); 
+}
+
+.filtroInput {
+  width: auto; 
+  flex-grow: 1; 
+  min-width: 180px; 
+  margin-bottom: 0; 
+}
+
+.exportButton {
+  width: auto;
+  flex-grow: 0; 
+  background-color: #198754; 
+  border-color: #198754;
+}
+.exportButton:hover {
+  background-color: #157347;
+}
+
+
+.tableScrollWrapper {
+  width: 100%;
+  overflow-x: auto; 
+}

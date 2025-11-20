@@ -1,0 +1,98 @@
+/* Em: src/pages/Etiqueta.module.css */
+
+.pageContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555; /* Fundo escuro para destacar a etiqueta */
+  }
+  
+  /* Define o tamanho da etiqueta (10cm x 8cm) */
+  .etiqueta {
+    width: 10cm;
+    height: 8cm;
+    background-color: white;
+    border: 1px dashed #ccc;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5cm;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .productName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    word-break: break-word;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 0.5cm;
+  }
+  
+  .footer {
+    border-top: 2px solid #000;
+    padding-top: 0.5cm;
+    text-align: center;
+  
+    /* Garante que o <svg> do código de barras se centralize */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skuLabel {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .skuBarcode {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 2px; /* Simula um código de barras */
+  }
+  
+  .error {
+    color: red;
+    font-size: 2rem;
+  }
+  
+  /* --- A MÁGICA DA IMPRESSÃO --- */
+  @media print {
+    /* Esconde tudo, exceto a etiqueta */
+    body > * {
+      visibility: hidden;
+    }
+    .pageContainer, .etiqueta {
+      visibility: visible;
+    }
+    /* Remove o fundo cinza da página de impressão */
+    .pageContainer {
+      background-color: white;
+    }
+    /* Faz a etiqueta ocupar a página inteira */
+    .etiqueta {
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: none;
+      box-shadow: none;
+    }
+  }

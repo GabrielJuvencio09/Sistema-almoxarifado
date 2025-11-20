@@ -1,0 +1,36 @@
+/* Em: src/components/Pagination.module.css */
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 1.5rem; 
+  }
+  
+  .pageButton {
+    width: auto; 
+    display: inline-flex;
+    gap: 0.5rem;
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .pageButton:hover {
+    background-color: #e2e6ea;
+  }
+  
+  .pageButton:disabled {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .pageInfo {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+  }

@@ -1,0 +1,173 @@
+/* Em: src/components/Navbar/Navbar.module.css */
+
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 2rem; /* Espaçamento nas laterais */
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Limita a largura do conteúdo */
+  margin: 0 auto; /* Centraliza */
+  height: 64px;
+  position: relative; /* (NOVO) Para posicionar o menu móvel */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+.logoIcon {
+  color: #0d6efd; /* Azul do nosso botão */
+}
+
+/* --- (NOVO) Container para links e área do utilizador --- */
+.menuContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menuLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.menuLink:hover {
+  color: #0d6efd;
+}
+
+.userArea {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userName {
+  font-weight: 500;
+  color: #333;
+}
+
+
+.logoutButton {
+  width: auto; 
+  padding: 0.5rem;
+  background-color: #f8f9fa; 
+  color: #555;
+  border: 1px solid #e0e0e0;
+}
+
+.logoutButton:hover {
+  background-color: #e2e6ea;
+  color: #333;
+}
+
+/* (NOVO) Esconde o texto "Sair" em ecrãs grandes */
+.logoutText {
+  display: none;
+}
+
+/* --- (NOVO) Botão Hambúrguer --- */
+.mobileToggle {
+  display: none; /* Escondido em ecrãs grandes */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 0.5rem;
+}
+
+
+/* --- (NOVO) MEDIA QUERY PARA MÓVEL --- */
+/* Vamos usar 900px como ponto de quebra */
+@media (max-width: 900px) {
+  .navContainer {
+    padding: 0 1rem; /* Menor espaçamento nas laterais do móvel */
+  }
+
+  .logo {
+    font-size: 1rem; /* Diminui o logo */
+  }
+
+  /* Esconde o menu de ecrã grande */
+  .menuContainer {
+    display: none;
+  }
+
+  /* Mostra o botão hambúrguer */
+  .mobileToggle {
+    display: block;
+    z-index: 101; /* Fica acima do menu */
+  }
+
+  /* Estilos do menu quando está aberto */
+  .menuContainer.menuOpen {
+    display: flex;
+    flex-direction: column; /* Empilha os itens */
+    align-items: center; /* Centraliza os itens */
+    gap: 1rem;
+
+    position: absolute;
+    top: 64px; /* Abaixo da navbar */
+    left: 0;
+    right: 0;
+
+    background-color: white;
+    padding: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+
+  /* Organiza os links verticalmente */
+  .menuContainer.menuOpen .menuLinks {
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    text-align: center;
+  }
+  .menuLink {
+    font-size: 1.1rem;
+  }
+
+  /* Organiza a área do utilizador verticalmente */
+  .menuContainer.menuOpen .userArea {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  /* Mostra o texto "Sair" no botão de logout */
+  .menuContainer.menuOpen .logoutButton {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    background-color: #f8d7da;
+    color: #dc3545;
+    border-color: #f5c2c7;
+  }
+  .menuContainer.menuOpen .logoutButton .logoutText {
+    display: inline;
+  }
+}

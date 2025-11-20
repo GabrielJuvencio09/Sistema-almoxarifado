@@ -1,0 +1,28 @@
+.loginContainer {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .loginCard {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem;
+  }
+  .iconWrapper {
+    display: inline-flex;
+    padding: 0.75rem;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  .title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin: 0;
+  }

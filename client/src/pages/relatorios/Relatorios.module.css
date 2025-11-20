@@ -1,0 +1,92 @@
+
+.relatoriosContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card do Filtro */
+.filtroCard {
+  background-color: #f8f9fa;
+}
+.filtroForm {
+  display: flex;
+  align-items: flex-end; 
+  flex-wrap: wrap; 
+  gap: 1.5rem;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.inputGroup label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.dateInput, .select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: white;
+}
+.select {
+  width: 200px; 
+}
+.filtroButton {
+  width: auto;
+}
+
+/* Cards de Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1.5rem;
+}
+.statCard { padding: 1.5rem !important; }
+.statCard p { margin: 0; color: #555; font-weight: 500; }
+.statCard span { font-size: 2.5rem; font-weight: 700; color: #333; display: block; margin-top: 0.5rem; }
+.statCardMoney { border-left: 4px solid #0d6efd; }
+.statCardMoney span { color: #0d6efd; }
+
+/* Grid das Tabelas */
+.tabelasGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Wrapper de Scroll */
+.tableScrollWrapper {
+  max-height: 500px; 
+  overflow-y: auto;
+}
+
+/* Estilo genérico de tabela */
+.reportTable { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.reportTable th,
+.reportTable td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid #e0e0e0; }
+.reportTable th { background-color: #f8f9fa; font-weight: 600; }
+.reportTable tbody tr:hover { background-color: #f8f9fa; }
+
+.mesAno { font-weight: 500; text-transform: capitalize; }
+.valorTotal { font-weight: 700; color: #198754; }
+.valorTotalConsumo { font-weight: 700; color: #dc3545; }
+.error { color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c2c7; padding: 1rem; border-radius: 8px; }
+
+
+@media (max-width: 900px) {
+  .tabelasGrid { grid-template-columns: 1fr; }
+  .filtroForm { gap: 1rem; }
+  .select, .filtroButton { width: 100%; }
+}
+
+
+.reportTable tbody tr.clickableRow {
+  cursor: pointer;
+}
+.reportTable tbody tr.clickableRow:hover {
+  background-color: #f0f2f5; 
+}
