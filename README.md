@@ -20,7 +20,7 @@ O grande diferencial técnico deste projeto é o módulo de **Provisionamento**,
 |:-----------------------:|:-------------------------:|
 | ![Import XML](assets/Importaçao-de-xml.png) | ![Histórico](assets/Historico.png) |
 
-*(Nota: As imagens acima são placeholders. Substitua pelos links reais dos seus prints)*
+
 
 ---
 
